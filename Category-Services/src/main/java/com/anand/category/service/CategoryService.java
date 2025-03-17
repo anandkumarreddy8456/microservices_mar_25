@@ -8,7 +8,7 @@ import java.util.Set;
 public interface CategoryService {
     Category createCategory(Category category, OnlineAppDto onlineAppDto);
     Set<Category> getAllCategoriesByOnlineAppId(Long id);
-    Category getCategoryById(Long id);
-    void deleteCategoryById(Long id);
+    Category getCategoryById(Long id) throws Exception;
 
+    void deleteCategoryById(Long id, Long OnlineAppId) throws Exception;
 }

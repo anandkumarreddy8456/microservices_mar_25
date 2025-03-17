@@ -18,8 +18,8 @@ public class Category {
     private String name;
 
     private String image;
-    @Column(nullable = false)
-    private Long OnlineApp;
+
+    private Long onlineAppId;
 
 }
 
