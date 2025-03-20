@@ -13,18 +13,22 @@
         <module name="Booking-Service" />
         <module name="OnlineApp" />
         <module name="ServiceOffering" />
+        <module name="Project-microservices" />
         <module name="Category-Services" />
-        <module name="Test-of-Micro-Services" />
         <module name="Test-of-Micro-Services (1)" />
         <module name="userService" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Test-of-Micro-Services" target="17" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Booking-Service" options="-parameters" />
       <module name="Category-Services" options="-parameters" />
       <module name="OnlineApp" options="-parameters" />
+      <module name="Project-microservices" options="-parameters" />
       <module name="ServiceOffering" options="-parameters" />
       <module name="Test-of-Micro-Services" options="-parameters" />
       <module name="Test-of-Micro-Services (1)" options="-parameters" />

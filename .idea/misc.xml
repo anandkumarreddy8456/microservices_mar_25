@@ -11,7 +11,13 @@
         <option value="$PROJECT_DIR$/Booking-Service/pom.xml" />
         <option value="$PROJECT_DIR$/../Test-of-Micro-Services/pom.xml" />
         <option value="$PROJECT_DIR$/Test-of-Micro-Services/pom.xml" />
+        <option value="$PROJECT_DIR$/Project-microservices/pom.xml" />
       </list>
+    </option>
+    <option name="ignoredFiles">
+      <set>
+        <option value="$PROJECT_DIR$/../Test-of-Micro-Services/pom.xml" />
+      </set>
     </option>
   </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="17" project-jdk-type="JavaSDK">
