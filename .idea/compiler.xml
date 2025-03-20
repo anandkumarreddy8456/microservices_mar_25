@@ -3,7 +3,7 @@
   <component name="CompilerConfiguration">
     <annotationProcessing>
       <profile default="true" name="Default" enabled="true" />
-      <profile name="Annotation profile for Booking-Service" enabled="true">
+      <profile name="Annotation profile for userService" enabled="true">
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
@@ -13,8 +13,10 @@
         <module name="Booking-Service" />
         <module name="OnlineApp" />
         <module name="ServiceOffering" />
-        <module name="userService" />
         <module name="Category-Services" />
+        <module name="Test-of-Micro-Services" />
+        <module name="Test-of-Micro-Services (1)" />
+        <module name="userService" />
       </profile>
     </annotationProcessing>
   </component>
@@ -24,6 +26,8 @@
       <module name="Category-Services" options="-parameters" />
       <module name="OnlineApp" options="-parameters" />
       <module name="ServiceOffering" options="-parameters" />
+      <module name="Test-of-Micro-Services" options="-parameters" />
+      <module name="Test-of-Micro-Services (1)" options="-parameters" />
       <module name="userService" options="-parameters" />
     </option>
   </component>
