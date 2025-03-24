@@ -1,10 +1,13 @@
 package com.anand.entity;
 
+import lombok.Data;
+
+@Data
 public class OnlineAppReport {
     private Long OnlineAppId;
     private String OnlineAppName;
     private Double totalEarnings;
-    private Integer totalBookings;
+    private int totalBookings;
     private  Integer cancelBookings;
     private Double totalRefund;
 

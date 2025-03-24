@@ -8,17 +8,18 @@ import com.anand.payload.OnlineAppDto;
 import com.anand.payload.ServiceDto;
 import com.anand.payload.UserDto;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Set;
 
 public interface BookingService {
-    Booking createBooking(BookingRequest bookingRequest, UserDto userDto, OnlineAppDto onlineAppDto, Set<ServiceDto> serviceDto);
+    Booking createBooking(BookingRequest bookingRequest, UserDto userDto, OnlineAppDto onlineAppDto, Set<ServiceDto> serviceDto) throws Exception;
     List<Booking> getBookingsByCustomerID(Long customerId);
     List<Booking> getBookingsByOnlineAppId(Long onlineAppId);
-    Booking getBookingById(Long id);
-    Booking updateBookingById(BookingStatus bookingStatus, Long id);
-    List<Booking> getBookingsByDate(LocalDateTime localDateTime,Long onlineAPpId);
+    Booking getBookingById(Long id) throws Exception;
+    Booking updateBookingById(BookingStatus bookingStatus, Long id) throws Exception;
+    List<Booking> getBookingsByDate(LocalDate localDateTime, Long onlineAPpId) throws Exception;
     OnlineAppReport getOnlineAppReport(Long onlineAppId);
 
 

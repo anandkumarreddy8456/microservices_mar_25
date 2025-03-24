@@ -25,5 +25,5 @@ public class Booking {
     private BookingStatus bookingStatus=BookingStatus.PENDING;
     @ElementCollection
     private Set<Long> serviceIds;
-    private int totalService;
+    private int totalPrice;
 }
