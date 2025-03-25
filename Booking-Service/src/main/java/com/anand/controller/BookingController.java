@@ -12,6 +12,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -30,6 +31,8 @@ public class BookingController {
 
         OnlineAppDto onlineAppDto=new OnlineAppDto();
         onlineAppDto.setId(onlineAppId);
+        onlineAppDto.setOpenTime(LocalTime.of(10, 0)); ;
+        onlineAppDto.setCloseTime(onlineAppDto.getOpenTime().plusHours(12));
         Set<ServiceDto> dtos=new HashSet<>();
         ServiceDto serviceDto1=new ServiceDto();
         serviceDto1.setId(1L);
@@ -61,9 +64,9 @@ public class BookingController {
     public ResponseEntity<BookingDto> getBookingById(@RequestParam Long id) throws Exception {
         return new ResponseEntity<>(BookingMapper.toBookingdto(bookingService.getBookingById(id)),HttpStatus.OK);
     }
-    @PutMapping("")
+    @PutMapping("/update")
     public ResponseEntity<BookingDto> updateBookingStatus(@RequestParam Long id, @RequestParam BookingStatus bookingStatus) throws Exception {
-        return new ResponseEntity<>(BookingMapper.toBookingdto(bookingService.updateBookingById(bookingStatus,id)),HttpStatus.OK);
+        return new ResponseEntity<>(BookingMapper.toBookingdto(bookingService.updateBookingById(id,bookingStatus)),HttpStatus.OK);
     }
     @GetMapping("/getBookSlot")
     public ResponseEntity<List<BookingSlotDto>> getBookSlot(@RequestParam Long id, @RequestParam(required = false) LocalDate localDate) throws Exception {

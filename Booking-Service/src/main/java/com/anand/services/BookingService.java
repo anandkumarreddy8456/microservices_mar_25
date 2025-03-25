@@ -18,7 +18,7 @@ public interface BookingService {
     List<Booking> getBookingsByCustomerID(Long customerId);
     List<Booking> getBookingsByOnlineAppId(Long onlineAppId);
     Booking getBookingById(Long id) throws Exception;
-    Booking updateBookingById(BookingStatus bookingStatus, Long id) throws Exception;
+    Booking updateBookingById(Long id,BookingStatus bookingStatus) throws Exception;
     List<Booking> getBookingsByDate(LocalDate localDateTime, Long onlineAPpId) throws Exception;
     OnlineAppReport getOnlineAppReport(Long onlineAppId);
 

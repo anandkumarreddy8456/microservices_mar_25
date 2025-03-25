@@ -7,7 +7,7 @@ import java.util.Set;
 @Data
 public class BookingRequest {
 
-    private LocalDateTime startTIme;
+    private LocalDateTime startTime;
     private LocalDateTime endTime;
     private Set<Long> serviceIds;
 }

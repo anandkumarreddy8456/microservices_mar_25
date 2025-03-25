@@ -28,7 +28,7 @@ public class BookingServiceImpl implements BookingService {
                                  OnlineAppDto onlineAppDto,
                                  Set<ServiceDto> serviceDto) throws Exception {
         int totalDuration=serviceDto.stream().mapToInt(ServiceDto::getDuration).sum();
-        LocalDateTime startTime=bookingRequest.getStartTIme();
+        LocalDateTime startTime=bookingRequest.getStartTime();
         LocalDateTime endTime=startTime.plusMinutes(totalDuration);
         Boolean istime=isTimeSlotAvailable(onlineAppDto,startTime,endTime);
         int totalAmount=serviceDto.stream().mapToInt(ServiceDto::getPrice).sum();
@@ -86,7 +86,7 @@ public class BookingServiceImpl implements BookingService {
     }
 
     @Override
-    public Booking updateBookingById(BookingStatus bookingStatus, Long id) throws Exception {
+    public Booking updateBookingById( Long id,BookingStatus bookingStatus) throws Exception {
         Booking booking=getBookingById(id);
         booking.setBookingStatus(bookingStatus);
         return booking;

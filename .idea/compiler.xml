@@ -13,6 +13,7 @@
         <module name="Booking-Service" />
         <module name="OnlineApp" />
         <module name="ServiceOffering" />
+        <module name="Payment-Service" />
         <module name="Project-microservices" />
         <module name="Category-Services" />
         <module name="Test-of-Micro-Services (1)" />
@@ -28,6 +29,7 @@
       <module name="Booking-Service" options="-parameters" />
       <module name="Category-Services" options="-parameters" />
       <module name="OnlineApp" options="-parameters" />
+      <module name="Payment-Service" options="-parameters" />
       <module name="Project-microservices" options="-parameters" />
       <module name="ServiceOffering" options="-parameters" />
       <module name="Test-of-Micro-Services" options="-parameters" />
